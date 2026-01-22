@@ -187,8 +187,56 @@ Regression models (Multiple Linear Regression, ANN Regression, Gradient Boosting
 - Model predictions must match expected outputs within a defined tolerance
 
 This verifies end-to-end regression correctness beyond only training accuracy.
+## Results
 
+This project consists of two main stages:
 
+1. **Classification Task**  
+   Predict whether a material is **Metal** or **Non-metal**.
+
+2. **Regression Task (Metals only)**  
+   Predict the **Debye Temperature** of metallic compounds using ML models.
+
+---
+
+### 1) Classification Results (Metal vs Non-metal)
+
+Three classification models were implemented and evaluated:
+
+| Model | F1 Score | Recall | Precision | Accuracy |
+|------|----------|--------|-----------|----------|
+| ANN Classification | 0.929 | 0.928 | 0.930 | 90.01% |
+| KNN Classification | 0.924 | 0.926 | 0.922 | 89.29% |
+| Random Forest Classification | 0.754 | 0.808 | 0.706 | 62.74% |
+
+**Best classifier:** **ANN Classification**  
+It achieved the highest performance across F1 Score, Precision, Recall, and Accuracy.
+
+---
+
+### 2) Regression Results (Debye Temperature Prediction)
+
+Regression was performed only on samples classified as **Metals**.  
+Three regression models were evaluated:
+
+| Model | RMSE | MAE | R² |
+|------|------|-----|----|
+| Gradient Boosting Regression | 0.378 | 0.255 | 0.89 |
+| ANN Regression | 0.532 | 0.304 | 0.784 |
+| Multiple Linear Regression (MLR) | 0.440 | 0.257 | 0.852 |
+
+**Best regression model:** **Gradient Boosting Regression**  
+It achieved the **lowest RMSE**, **lowest MAE**, and the **highest R² (0.89)**.
+
+---
+
+### Overall Summary
+
+- The **ANN model** performed best for **classification**
+- The **Gradient Boosting model** performed best for **regression**
+- The pipeline successfully:
+  - Identifies **metals vs non-metals**
+  - Predicts **Debye temperature** for metals using engineered features + PCA
 
 
 
