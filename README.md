@@ -107,7 +107,7 @@ Testing is a major focus of this project and is documented in detail in the repo
 ```bash
 pytest
 ```
-## Testing
+## Testing in detail
 This project contains a complete test suite implemented using **PyTest** to validate correctness of the full pipeline.
 ### 1) Data Preprocessing & Feature Engineering Tests
 The preprocessing module is tested using:
