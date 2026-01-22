@@ -26,7 +26,7 @@ Full report and results: [ppp_report.pdf](ppp_report.pdf)
 
 ## Repository Structure (with explanations)
 
-´´´text
+```text
 ├── main.py
 │   └── Runs the full pipeline end-to-end (classification + regression)
 │
@@ -87,6 +87,6 @@ Full report and results: [ppp_report.pdf](ppp_report.pdf)
     ├── pca_testing/
     └── ...
     └── Complete unit + functional test suite using pytest
-´´´
+```
 
 
