@@ -88,5 +88,18 @@ Full report and results: [ppp_report.pdf](ppp_report.pdf)
     └── ...
     └── Complete unit + functional test suite using pytest
 ```
+## Requirements
+This project uses Python and standard scientific libraries.
+ - Python 3.10.7     - numpy 1.24.3
+ - matplotlib 3.5.2  - pytest 7.1.2
+## How to Run the Full Project
+From the project root:
+```bash
+python main.py
+```
+This will execute the full workflow:
+ - preprocessing → descriptors → encoding → PCA → training → evaluation
+## Testing (Unit + Functional + Integrated Testing)
+
 
 
