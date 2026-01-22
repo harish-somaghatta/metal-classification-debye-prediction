@@ -1,3 +1,4 @@
+
 # Import the necessary libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,12 +7,13 @@ import sys
 
 db_file = os.path.abspath(os.path.join(os.path.dirname(__file__), 'Social_Network_Ads.csv'))
 sys.path.insert(0, db_file)
-ANN_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'ANN'))
-sys.path.insert(0, ANN_dir)
+Dt_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), 'Decision_tree_based_models'))
+sys.path.insert(0, Dt_dir)
 
-from ANN_classification import ANN_classification_main
+from random_forest_classification import main_random_forest
 
-def decision_boundary_generation_DNN(x_train, x_test, y_train, y_test, xx, yy):
+
+def decision_boundary_generation_rf(x_train, x_test, y_train, y_test, xx, yy):
     
     """
     Generate decision boundary for DNN classification.
@@ -28,14 +30,14 @@ def decision_boundary_generation_DNN(x_train, x_test, y_train, y_test, xx, yy):
     None 
     """
     
-    epoch = 50000
-    m_batch = 5984
-    n_neurons = [10, 50, 50]
-    alpha = 0.0354728214309162
-    targetf_regression = None
-    _, Z = ANN_classification_main(x_train, grid_points, y_train, y_test ,epoch, alpha, m_batch, n_neurons, targetf_regression)
+    num_trees = 10
+    maximum_depth = 50
+    minimum_samples = 20
+    seed = 14
+    Z, _ = main_random_forest(x_train, grid_points, y_train, y_test, num_trees, maximum_depth, minimum_samples, seed)
     Z = np.array(Z) 
     Z =  np.reshape(Z, xx.shape)
+    print(Z)
     # Plot the decision boundary
     
     plt.contourf(xx, yy, Z, alpha=0.8)
@@ -48,7 +50,7 @@ def decision_boundary_generation_DNN(x_train, x_test, y_train, y_test, xx, yy):
 
     plt.xlabel('Feature 1')
     plt.ylabel('Feature 2')
-    plt.title('Decision Boundary for Deep Neural Network')
+    plt.title('Decision Boundary for Random Forest')
     plt.legend()
     plt.show()
 
@@ -84,4 +86,4 @@ xx, yy = np.meshgrid(np.arange(x_min, x_max, 1), np.arange(y_min, y_max, 1000))
 
 grid_points = np.hstack((xx.flatten().reshape(-1, 1), yy.flatten().reshape(-1, 1)))
 
-decision_boundary_generation_DNN(x_train, x_test, y_train, y_test, xx, yy)
+decision_boundary_generation_rf(x_train, x_test, y_train, y_test, xx, yy)
