@@ -134,6 +134,60 @@ PCA correctness is verified using two validation strategies:
   - Sum of eigenvalues of the covariance matrix ≈ total dataset variance
     
   This confirms that PCA correctly captures the total dataset variance.
+---
+### 3) KNN Testing
+
+KNN functionality is tested by:
+
+- Manually computing distances between points
+- Sorting nearest neighbors
+- Comparing expected labels with model-predicted labels
+
+**Additional verification**
+- **Decision boundary plotting**
+  - The KNN decision surface is plotted using a sample dataset
+  - This visually validates that classification regions behave as expected
+
+---
+
+### 4) ANN Testing (Neural Networks)
+
+ANN tests include:
+
+- **Forward pass validation**
+  - Compare ANN outputs against known precomputed outputs
+  - Validate activation function outputs
+
+- **Gradient checking for backpropagation**
+  - Perturb weights using a small epsilon value (ε = 1e−4)
+  - Compute numerical gradients using finite differences
+  - Compare numerical gradients with analytical backpropagation gradients
+  - Small gradient error confirms correct implementation
+
+This gradient-check step is critical because small derivative mistakes can make training unstable or incorrect.
+
+---
+
+### 5) Random Forest + Tree Model Testing
+
+Tree-based classification correctness is verified using:
+
+- **Decision boundary plots**
+  - Ensures model behavior is consistent with expected region separation
+  - Confirms correct classification logic and decision splitting behavior
+
+---
+
+### 6) Regression Model Functional Testing
+
+Regression models (Multiple Linear Regression, ANN Regression, Gradient Boosting Regression) are tested using a controlled dataset:
+
+- Independent features include fixed and varying signals
+- Target output is generated using a known function (example: `y = n * 2`)
+- Model predictions must match expected outputs within a defined tolerance
+
+This verifies end-to-end regression correctness beyond only training accuracy.
+
 
 
 
