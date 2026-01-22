@@ -113,7 +113,7 @@ This project contains a complete test suite implemented using **PyTest** to vali
 The preprocessing module is tested using:
 - **Unit tests**: verify individual preprocessing functions  
 - **Integration tests**: verify full preprocessing pipeline outputs  
-**Approach**
+**Approach**:
 - Inputs are provided using predefined test datasets
 - Outputs are compared against expected results
 - `pytest` assertions validate correctness
@@ -128,9 +128,11 @@ PCA correctness is verified using two validation strategies:
   - PC1 direction is computed
   - High-offset points are removed
   - PC1 angle shift and alignment improvements are observed
+ 
   This confirms that PC1 points towards the maximum-variance direction.
 - **Variance Preservation Check**
   - Sum of eigenvalues of the covariance matrix ≈ total dataset variance
+    
   This confirms that PCA correctly captures the total dataset variance.
 
 
