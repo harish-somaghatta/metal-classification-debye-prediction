@@ -107,15 +107,15 @@ Testing is a major focus of this project and is documented in detail in the repo
 ```bash
 pytest
 ```
-### Testing in depth
+## Testing in depth
 1. Data Preprocessing & Feature Engineering Tests
 The preprocessing module is tested using:
- - **Unit Tests**: Verify individual functions
- - **Integrated Tests**: Verify full preprocessing pipeline outputs
+  - **Unit Tests**: Verify individual functions
+  - **Integrated Tests**: Verify full preprocessing pipeline outputs
 Approach:
- - Input is provided from predefined test datasets
- - Output is compared against expected results
- - PyTest assertions validate correctness
+  - Input is provided from predefined test datasets
+  - Output is compared against expected results
+  - PyTest assertions validate correctness
 2. PCA Testing
 PCA correctness is verified using two validation strategies:
  - **Variance preservation check**
