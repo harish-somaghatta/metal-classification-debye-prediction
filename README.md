@@ -108,6 +108,7 @@ Testing is a major focus of this project and is documented in detail in the repo
 pytest
 ```
 ## Testing in depth
+
 1. Data Preprocessing & Feature Engineering Tests
 The preprocessing module is tested using:
   - **Unit Tests**: Verify individual functions
@@ -117,8 +118,15 @@ Approach:
   - Output is compared against expected results
   - PyTest assertions validate correctness
 2. PCA Testing
+
 PCA correctness is verified using two validation strategies:
- - **Variance preservation check**
+ - **Principal component vector alignment test**: A geometric validation is performed
+     - Create synthetic 2D data with clear “dominant variance direction”
+     - Compute PC1 direction
+     - Remove high-offset points
+     - Observe PC1 angle shift and alignment improvements
+  This confirms the PCA vector points towards maximum variance direction. 
+ - **Variance preservation check**:
      - Sum of eigenvalues from covariance matrix ≈ total variance of the dataset
  This confirms that PCA correctly captures total dataset variance. 
  - 
