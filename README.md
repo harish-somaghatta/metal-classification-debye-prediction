@@ -100,6 +100,29 @@ python main.py
 This will execute the full workflow:
  - preprocessing → descriptors → encoding → PCA → training → evaluation
 ## Testing (Unit + Functional + Integrated Testing)
+This repository contains an extensive PyTest suite for validating each pipeline stage.
+Testing is a major focus of this project and is documented in detail in the report.
+
+## Run all tests
+```bash
+pytest
+```
+### Testing in depth
+1. Data Preprocessing & Feature Engineering Tests
+The preprocessing module is tested using:
+ - **Unit Tests**: Verify individual functions
+ - **Integrated Tests**: Verify full preprocessing pipeline outputs
+Approach:
+ - Input is provided from predefined test datasets
+ - Output is compared against expected results
+ - PyTest assertions validate correctness
+2. PCA Testing
+PCA correctness is verified using two validation strategies:
+ - **Variance preservation check**
+     - Sum of eigenvalues from covariance matrix ≈ total variance of the dataset
+ This confirms that PCA correctly captures total dataset variance. 
+ - 
+
 
 
 
