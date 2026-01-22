@@ -1,0 +1,6 @@
+compound,spacegroup,thermal_conductivity,material_type,debye_temperature
+Mn,227,1.46419,Non-Metal,248.911
+I22,225,150,Metal,312.156
+Nh4K2,223,0.689631,Non-Metal,230.033
+MnSo4I9,225,80,Metal,248.895
+MNhSK64,122,500,Non-Metal,880
