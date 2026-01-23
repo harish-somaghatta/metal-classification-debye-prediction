@@ -157,6 +157,8 @@ PCA correctness is verified using two validation strategies:
   This confirms that PC1 points towards the maximum-variance direction.
 - **Variance Preservation Check**
   - Sum of eigenvalues of the covariance matrix ≈ total dataset variance
+ 
+  <img src="Images/principalcomponent_vector.png" width="300">
     
   This confirms that PCA correctly captures the total dataset variance.
 ---
