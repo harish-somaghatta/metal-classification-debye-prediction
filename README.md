@@ -109,8 +109,14 @@ Full report and results: [ppp_report.pdf](ppp_report.pdf)
 ```
 ## Requirements
 This project uses Python and standard scientific libraries.
- - Python 3.10.7     - numpy 1.24.3
- - matplotlib 3.5.2  - pytest 7.1.2
+
+Install dependencies using:
+```bash
+pip install -r requirements.txt
+```
+Tested with:
+ - Python 3.10.7
+ - NumPy, Matplotlib, PyTest
 ## How to Run the Full Project
 From the project root:
 ```bash
