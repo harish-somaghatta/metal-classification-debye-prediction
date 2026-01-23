@@ -22,6 +22,7 @@ Since all models and supporting utilities were implemented **from scratch using 
 - Optimization (SGD, Momentum, RMSProp, Adam)
 - Model evaluation metrics
 - Testing and validation using PyTest (unit + integration + functional tests)
+  
 The workflow includes feature engineering (descriptors), encoding, dimensionality reduction (PCA), and testing (unit + functional) using PyTest.
 Full report and results: [ppp_report.pdf](ppp_report.pdf)
 
