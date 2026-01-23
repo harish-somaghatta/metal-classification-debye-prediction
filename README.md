@@ -1,9 +1,27 @@
 # Metal/Non-Metal Classification + Debye Temperature Prediction (From Scratch)
 This repository contains an end-to-end machine learning pipeline for materials property prediction.
-The project focuses on:
-1. **Classification**: Classify whether a compound behaves like a metal or non-metal
-2. **Regression**: Predict whether a compound behaves like a metal or non-metal
 
+The main objective of this project was to develop a complete machine learning pipeline to:
+
+1. **Classify materials into Metals and Non-metals**
+2. **Predict the Debye Temperature of metals**
+
+To achieve this, the dataset was transformed into an ML-ready format using a full preprocessing pipeline including:
+
+- Feature selection
+- Handling missing values
+- Label/ordinal/one-hot encoding
+- Composition-based feature engineering
+- Dimensionality reduction using PCA
+
+Since all models and supporting utilities were implemented **from scratch using only NumPy and Matplotlib**, this work demonstrates a strong understanding of core concepts including:
+
+- Data preprocessing and feature engineering
+- PCA mathematics and eigen-decomposition
+- Classification/regression algorithms
+- Optimization (SGD, Momentum, RMSProp, Adam)
+- Model evaluation metrics
+- Testing and validation using PyTest (unit + integration + functional tests)
 The workflow includes feature engineering (descriptors), encoding, dimensionality reduction (PCA), and testing (unit + functional) using PyTest.
 Full report and results: [ppp_report.pdf](ppp_report.pdf)
 
