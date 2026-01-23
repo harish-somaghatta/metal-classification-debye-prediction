@@ -153,13 +153,11 @@ PCA correctness is verified using two validation strategies:
   - PC1 direction is computed
   - High-offset points are removed
   - PC1 angle shift and alignment improvements are observed
- 
+<img src="Images/principalcomponent_vector.png" width="500">
   This confirms that PC1 points towards the maximum-variance direction.
 - **Variance Preservation Check**
   - Sum of eigenvalues of the covariance matrix ≈ total dataset variance
- 
-  <img src="Images/principalcomponent_vector.png" width="300">
-    
+  - 
   This confirms that PCA correctly captures the total dataset variance.
 ---
 ### 3) KNN Testing
@@ -172,6 +170,7 @@ KNN functionality is tested by:
 
 **Additional verification**
 - **Decision boundary plotting**
+<img src="Images/decision_tree_KNN.png" width="500">
   - The KNN decision surface is plotted using a sample dataset
   - This visually validates that classification regions behave as expected
 
@@ -200,6 +199,7 @@ This gradient-check step is critical because small derivative mistakes can make 
 Tree-based classification correctness is verified using:
 
 - **Decision boundary plots**
+<img src="Images/decision_tree_randomforest.png" width="500">
   - Ensures model behavior is consistent with expected region separation
   - Confirms correct classification logic and decision splitting behavior
 
